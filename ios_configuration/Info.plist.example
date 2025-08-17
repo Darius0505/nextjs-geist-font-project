@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Existing Info.plist content -->
+    
+    <!-- Background Modes for Push Notifications -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>remote-notification</string>
+        <string>background-fetch</string>
+    </array>
+    
+    <!-- Notification Usage Description -->
+    <key>NSUserNotificationUsageDescription</key>
+    <string>Ứng dụng cần quyền thông báo để gửi thông tin về ý kiến khách hàng mới</string>
+    
+    <!-- App Transport Security (if needed for development) -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <false/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>localhost</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSExceptionMinimumTLSVersion</key>
+                <string>TLSv1.0</string>
+                <key>NSExceptionPortsIncludeNonSecure</key>
+                <array>
+                    <integer>3000</integer>
+                    <integer>8080</integer>
+                </array>
+            </dict>
+        </dict>
+    </dict>
+    
+    <!-- Firebase Configuration -->
+    <key>FIREBASE_ANALYTICS_COLLECTION_ENABLED</key>
+    <false/>
+    
+    <!-- App Icon Badge -->
+    <key>UIApplicationSupportsIndirectInputEvents</key>
+    <true/>
+    
+</dict>
+</plist>
